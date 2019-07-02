@@ -1,0 +1,153 @@
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.sidenav-container {
+  height: 100%;
+}
+.wrap-side {
+  padding: 10px 20px;
+  mat-form-field {
+    width: 100%;
+  }
+}
+mat-sidenav-content {
+  margin-top: 70px;
+  padding-top: 30px;
+  height: 100vh;
+  //overflow: hidden;
+  background-color: rgba(0,0,0,.1);
+}
+.sidenav {
+  width: 300px;
+  margin-top: 30px;
+  padding-top: 100px;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.24);
+}
+.calendar-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  > * {
+    flex: 1 1 auto;
+    max-width: 150px;
+  }
+}
+.app-container {
+  max-width: 1400px;
+  margin: auto;
+  height: 100%;
+  padding: 15px;
+  //background-color: rgba(0,0,0,.1);
+}
+
+.total-accounts-block {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  //text-align: center;
+  .graph-right {
+    flex: 1 1 auto;
+    max-width: 600px;
+  }
+  .total-sum-wrap {
+    max-width: 500px;
+  }
+}
+
+.total-accounts {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  > * {
+    flex: 0 1 auto;
+  }
+}
+.total-accounts-graph {
+  max-width: 900px;
+}
+.all-accounts {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .all-accounts-list {
+    max-width: 200px;
+  }
+  .monthly-card {
+    flex: 1 1 auto;
+    //max-width: 650px;
+  }
+  .curr-card {
+    flex: 1 1 auto;
+    //max-width: 500px;
+  }
+}
+.sa-graph {
+  card {
+    width: 100%;
+  }
+
+}
+mat-card-content.woo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  > * {
+    flex: 1 1 auto;
+    //max-width: 350px;
+  }
+}
+.single-account-info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  > * {
+    flex: 1 1 auto;
+    //max-width: 350px;
+  }
+  mat-list {
+    max-width: 250px;
+  }
+}
+.select-acc {
+  margin-top: 30px;
+  max-width: 300px;
+}
+.sel-center {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  max-width: 300px;
+}
+.total-accounts-card-content {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  > * {
+    flex: 1 1 auto;
+    //max-width: 350px;
+  }
+}
+.calendar-wrap {
+  width: 100%;
+  fieldset {
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    width: 100%;
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}
+mat-list-item.all-accounts-list {
+  padding-right: 10px;
+  border-right: 4px solid rgba(0,118,206,.2);
+}

@@ -1,0 +1,88 @@
+<mat-sidenav-container class="main-nav">
+  <mat-sidenav #start>
+    <mat-nav-list>
+      <a (click)="start.close()" mat-list-item routerLink="home">
+        <mat-icon>home</mat-icon>
+        home</a>
+      <a (click)="start.close()" mat-list-item routerLink="payments">
+        <mat-icon>library_books</mat-icon>
+        payments</a>
+      <a (click)="start.close()" mat-list-item routerLink="dash">
+        <mat-icon>person_add</mat-icon>
+        dash</a>
+      <a (click)="start.close()" mat-list-item routerLink="payments">
+        <mat-icon>question_answer</mat-icon>
+        payments</a>
+      <a (click)="start.close()" mat-list-item routerLink="home">
+        <mat-icon>question_answer</mat-icon>
+        home</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar color="primary" class="mat-elevation-z10" style="position: fixed; z-index: 2; height: 90px">
+    <!--<button mat-icon-button (click)="start.open()">-->
+    <button mat-icon-button (click)="start.open()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!--    <a routerLink="/"><span class="logo-svg" style="background-color: rgba(0,0,0,.6); border: 1px solid white; margin-left: 25px; margin-top: 2px; padding: 2px 6px; border-radius: 6px;">-->
+    <!--     <svg width="100%" height="100%" viewBox="0 0 224 190" version="1.1"-->
+    <!--          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+    <!--          xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">-->
+    <!--       <g id="VersionMain-1" ><g id="TextTop"></g><g id="Sq">-->
+    <!--         <g style="fill: white">-->
+    <!--         <path d="M159.629,143.704c0,-1.752 -1.422,-3.174 -3.173,-3.174l-25.386,0c-1.752,0 -3.174,1.422 -3.174,3.174l0,35.565c0,1.752 1.422,3.174 3.174,3.174l25.386,0c1.751,0 3.173,-1.422 3.173,-3.174l0,-35.565Z"-->
+    <!--               style="fill: white;stroke:#737373;stroke-width:2.94px;"/>-->
+    <!--         <rect x="136.802" y="149.642" width="2.923" height="24.375"-->
+    <!--               style="fill:#007db8;"/><rect x="147.556" y="149.642" width="2.923" height="24.375"-->
+    <!--                                            style="fill:#007db8;"/></g>-->
+    <!--         <g>-->
+    <!--           <path d="M203.239,143.704c0,-1.752 -1.422,-3.174 -3.173,-3.174l-25.387,0c-1.751,0 -3.173,1.422 -3.173,3.174l0,35.565c0,1.752 1.422,3.174 3.173,3.174l25.387,0c1.751,0 3.173,-1.422 3.173,-3.174l0,-35.565Z"-->
+    <!--                 style="fill: antiquewhite;stroke:#737373;stroke-width:2.94px;"/>-->
+    <!--           <rect x="180.411" y="149.642" width="2.923" height="24.375"-->
+    <!--                 style="fill:#007db8;"/><rect x="191.166" y="149.642" width="2.923" height="24.375"-->
+    <!--                                              style="fill:#007db8;"/></g>-->
+    <!--         <g>-->
+    <!--           <path d="M116.02,143.704c0,-1.752 -1.422,-3.174 -3.174,-3.174l-25.386,0c-1.751,0 -3.173,1.422 -3.173,3.174l0,35.565c0,1.752 1.422,3.174 3.173,3.174l25.386,0c1.752,0 3.174,-1.422 3.174,-3.174l0,-35.565Z"-->
+    <!--                 style="fill: ghostwhite;stroke:#737373;stroke-width:2.94px;"/>-->
+    <!--           <rect x="93.192" y="149.642" width="2.923" height="24.375"-->
+    <!--                 style="fill:#007db8;"/>-->
+    <!--           <rect x="103.947" y="149.642" width="2.923" height="24.375"-->
+    <!--                                              style="fill:#007db8;"/></g>-->
+    <!--         <g>-->
+    <!--           <path d="M116.02,99.154c0,-1.751 -1.422,-3.173 -3.174,-3.173l-25.386,0c-1.751,0 -3.173,1.422 -3.173,3.173l0,29.279c0,1.752 1.422,3.174 3.173,3.174l25.386,0c1.752,0 3.174,-1.422 3.174,-3.174l0,-29.279Z"-->
+    <!--                 style="fill:white;stroke:#737373;stroke-width:2.94px;"/>-->
+    <!--           <rect x="93.192" y="103.725" width="2.923" height="20.719"-->
+    <!--                 style="fill:#007db8;"/>-->
+    <!--           <rect x="103.947" y="103.725" width="2.923" height="20.719"-->
+    <!--                 style="fill:#007db8;"/></g>-->
+    <!--         <g>-->
+    <!--           <path d="M159.629,99.154c0,-1.751 -1.422,-3.173 -3.173,-3.173l-25.386,0c-1.752,0 -3.174,1.422 -3.174,3.173l0,29.279c0,1.752 1.422,3.174 3.174,3.174l25.386,0c1.751,0 3.173,-1.422 3.173,-3.174l0,-29.279Z"-->
+    <!--                 style="fill: whitesmoke;stroke:#737373;stroke-width:2.94px;"/>-->
+    <!--           <rect x="136.802" y="103.725" width="2.923" height="20.719"-->
+    <!--                 style="fill:#007db8;"/>-->
+    <!--           <rect x="147.556" y="103.725" width="2.923" height="20.719"-->
+    <!--                 style="fill:#007db8;"/>-->
+    <!--         </g>-->
+    <!--         <g>-->
+    <!--           <path d="M116.02,54.366c0,-1.752 -1.422,-3.173 -3.174,-3.173l-25.386,0c-1.751,0 -3.173,1.421 -3.173,3.173l0,28.493c0,1.752 1.422,3.174 3.173,3.174l25.386,0c1.752,0 3.174,-1.422 3.174,-3.174l0,-28.493Z"-->
+    <!--                 style="fill: ghostwhite;stroke:#737373;stroke-width:2.94px;"/>-->
+    <!--           <rect x="93.192" y="58.766" width="2.923" height="20.262"-->
+    <!--                 style="fill:#007db8;"/>-->
+    <!--           <rect x="103.947" y="58.766" width="2.923" height="20.262"-->
+    <!--                 style="fill:#007db8;"/></g></g>-->
+    <!--         <path d="M84.187,0.383c-0.448,0.207 -2.056,0.497 -3.551,0.663c-1.533,0.165 -3.29,0.538 -3.963,0.869c-0.672,0.29 -1.607,0.538 -2.13,0.538c-0.258,0 -24.866,6.655 -37.336,23.772c-11.078,15.208 -10.186,40.924 -10.327,43.494c-0.187,3.56 -0.336,4.181 -0.972,4.554c-5.121,2.939 -12.56,10.597 -16.635,17.137c-1.794,2.856 -5.532,11.011 -6.018,13.081c-0.15,0.662 -0.449,1.78 -0.636,2.483c-0.822,2.65 -1.532,5.92 -1.981,8.9c-0.673,4.429 -0.86,13.04 -0.336,15.316c0.261,1.035 0.56,3.063 0.747,4.554c0.374,3.187 1.01,6.002 1.72,7.533c0.299,0.58 0.523,1.366 0.523,1.739c0,0.373 0.486,1.821 1.084,3.229c0.598,1.449 1.159,2.897 1.309,3.229c0.149,0.331 0.448,0.993 0.71,1.448c0.262,0.456 0.934,1.78 1.533,2.898c3.513,6.665 11.214,15.275 17.233,19.248c0.822,0.539 1.57,1.16 1.607,1.325c0.075,0.166 0.449,0.331 0.823,0.331c0.336,0 0.859,0.29 1.121,0.621c0.262,0.331 0.598,0.621 0.785,0.621c0.187,0 1.421,0.538 2.692,1.242c1.308,0.704 2.691,1.242 3.028,1.242c0.373,0 0.971,0.207 1.383,0.455c1.233,0.704 4.373,1.614 8.186,2.318c2.655,0.497 6.879,0.704 16.673,0.828l13.121,0.166l-0.075,-56.628c-0.037,-31.129 0.075,-56.918 0.225,-57.29c0.261,-0.58 -0.561,0 0,0c0.023,0 -1.003,-22.888 0.614,-25.622c0.92,-1.555 38.045,-2.069 46.885,-0.676c5.183,0.817 13.882,16.395 17.77,16.588c2.908,0.145 30.181,-1.183 36.847,0.304c19.395,4.326 26.577,30.058 26.606,30.01c3.149,-5.23 2.244,-40.391 -16.953,-54.738c-13.322,-9.956 -38.39,-10.412 -41.154,-9.455c-0.935,0.332 -2.019,0.58 -2.43,0.58c-0.486,0 -2.056,-1.573 -4.262,-4.181c-1.944,-2.318 -4.71,-5.216 -6.168,-6.499c-3.589,-3.146 -3.551,-3.104 -4.149,-3.725c-0.262,-0.249 -0.598,-0.497 -0.748,-0.497c-0.224,0 -2.392,-1.614 -2.804,-2.07c-0.411,-0.497 -9.682,-5.381 -10.168,-5.381c-0.299,0 -0.859,-0.29 -1.271,-0.621c-0.373,-0.331 -1.121,-0.621 -1.57,-0.621c-0.486,0 -1.345,-0.248 -1.869,-0.579c-1.159,-0.663 -4,-1.366 -7.626,-1.905c-1.346,-0.207 -3.14,-0.538 -3.925,-0.786c-1.682,-0.538 -13.046,-0.58 -14.168,-0.042Z"-->
+    <!--               style="fill:#007db8;fill-rule:nonzero;"/></g></svg>-->
+    <!--    </span></a>-->
+    <a routerLink="/"><span><img src="assets/n-logo.png" alt="" style="max-height: 80px; width: auto;"></span></a>
+    <!--    <a routerLink="/"><span><img src="assets/short-logo.png" alt="" style="max-height: 80px; width: auto;"></span></a>-->
+
+    <!--    <a mat-button routerLink="app/admin" routerLinkActive="mat-accent" class="nav-item">Admin-->
+    <!--    </a>-->
+    <span class="spacer"></span>
+    <a mat-button routerLink="timedata" routerLinkActive="mat-accent" class="nav-item">timedata</a>
+    <a mat-button routerLink="dash" routerLinkActive="mat-accent" class="nav-item">payment</a>
+    <a mat-button routerLink="dash" routerLinkActive="mat-accent" class="nav-item"><mat-icon>account_circle</mat-icon></a>
+
+
+  </mat-toolbar>
+  <ng-content></ng-content>
+</mat-sidenav-container>
