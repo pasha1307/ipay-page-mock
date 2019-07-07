@@ -24,6 +24,7 @@ import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SingleServiceComponent } from './single-service/single-service.component';
+import { AccountsComponent } from './accounts/accounts.component';
 FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme, TimeSeries);
 
 @NgModule({
@@ -32,7 +33,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme, TimeSeries);
     HomeComponent,
     MainNavComponent,
     PaymentComponent,
-    SingleServiceComponent
+    SingleServiceComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,

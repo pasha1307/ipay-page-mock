@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PaymentComponent} from './payment/payment.component';
 import {SingleServiceComponent} from './single-service/single-service.component';
+import {AccountsComponent} from './accounts/accounts.component';
 
 const routes: Routes = [
   {
@@ -9,11 +10,18 @@ const routes: Routes = [
     component: PaymentComponent,
     children: [
       {
-        path: ':id/:label',
+        path: '',
+        component: AccountsComponent,
+      },
+      {
+        path: ':acc/:datacenter',
+        component: AccountsComponent,
+      },
+      {
+        path: 'product/:id/:label',
         component: SingleServiceComponent,
       },
     ]
-
   },
   {
     path: 'timedata',

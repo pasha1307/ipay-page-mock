@@ -1,24 +1,24 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav class="left-side" #drawer class="sidenav" fixedInViewport="true"
+  <mat-sidenav #drawer class="sidenav left-side" fixedInViewport="true"
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <div class="wrap-side">
       <mat-form-field class="select-acc">
         <mat-label>Select account</mat-label>
         <mat-select [(value)]="selected" #sl>
-          <mat-option *ngFor="let acc of accountsTotals; let i = index" [value]="acc.total" (click)="onAccountSelect(i)">{{acc.name}}</mat-option>
+          <mat-option *ngFor="let acc of accountsTotals; let i = index" [value]="acc.total" [routerLink]="['/payments', i, 'account']" (click)="onAccountSelect(i)">{{acc.name}}</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field class="sel-center">
         <mat-label>By Data Center</mat-label>
         <mat-select [(value)]="selected" #sl>
-          <mat-option *ngFor="let acc of dataCenters; let i = index" [value]="acc.total" (click)="onDataCenterSelect(i)">{{acc.name}}</mat-option>
+          <mat-option *ngFor="let acc of dataCenters; let i = index" [value]="acc.total" [routerLink]="['/payments', i, 'datacenter']" (click)="onDataCenterSelect(i)">{{acc.name}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-nav-list>
         <h3 mat-subheader>Products</h3>
-        <mat-list-item *ngFor="let ac of initAllAccServices" [routerLink]="['/dash', ac.id, ac.label]">
+        <mat-list-item *ngFor="let ac of initAllAccServices" [routerLink]="['/payments/product', ac.id, ac.label]">
           <mat-icon mat-list-icon>note</mat-icon>
           <h4 mat-line>{{ac.label}}</h4>
           <p mat-line> {{ac.value | currency}} </p>
@@ -26,58 +26,9 @@
       </mat-nav-list>
     </div>
   </mat-sidenav>
-
   <mat-sidenav-content >
-    <main>
-      <router-outlet #o="outlet"></router-outlet>
-    </main>
-    <div class="app-container" style="text-align: center" *ngIf="!o.isActivated">
-
-      <!--      <p mat-line>Welcome to the Payment console, your month-to-date, and month-end forecast cost appear below</p>-->
-      <mat-card class="total-accounts-block">
-        <div class="total-sum-wrap">
-          <p class="mat-headline">Current Monthly Balance For {{optionLabel}}: </p>
-          <h1 class="mat-display-3">{{selected | currency}}</h1>
-          <!--          <p mat-line>Welcome to the Payment console, your month-to-date, and month-end forecast cost appear below</p>-->
-          <fusioncharts
-            width="400"
-            height="335"
-            type="Column2d"
-            [dataSource]="barData"
-          >
-          </fusioncharts>
-        </div>
-        <div class="graph-right">
-          <fusioncharts
-            width="100%"
-            height="100%"
-            type="doughnut2d"
-            [dataSource]="doughData"
-          >
-          </fusioncharts>
-        </div>
-        <mat-nav-list class="all-accounts-list">
-          <mat-list-item *ngFor="let ac of initAllAccServices; let it = index" style="text-align: right">
-            <h3 matLine [routerLink]="['/dash', ac.id, ac.label]">{{ac.label}}: <span class="mat-headline"> ${{ac.value}}</span> </h3>
-          </mat-list-item>
-        </mat-nav-list>
-      </mat-card>
-      <mat-divider></mat-divider>
-      <section class="total-accounts">
-        <div class="total-accounts-graph">
-          <mat-card class="course-card mat-elevation-z3" style="width: 900px">
-            <mat-card-content class="total-accounts-card-content">
-              <fusioncharts
-                width="100%"
-                height="500"
-                type="stackedcolumn2d"
-                [dataSource]="stackData"
-              >
-              </fusioncharts>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </section>
+    <div class="app-container">
+      <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

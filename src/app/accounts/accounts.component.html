@@ -1,0 +1,52 @@
+<div class="account-wrap">
+  <mat-card class="first-row-block mat-elevation-z3">
+    <div class="total-sum-wrap">
+      <ng-container *ngIf="isAccount">
+        <p class="mat-headline">Current Monthly Balance For {{accountLabel}}: </p>
+        <h1 class="mat-display-3">{{totalSum | currency}}</h1>
+      </ng-container>
+      <ng-container *ngIf="isCenter">
+        <p class="mat-headline">Monthly Balance For {{accountLabel}}: </p>
+        <h1 class="mat-display-3">{{totalSum | currency}}</h1>
+      </ng-container>
+      <!--          <p mat-line>Welcome to the Payment console, your month-to-date, and month-end forecast cost appear below</p>-->
+      <div class="bar-chart-avg">
+        <fusioncharts
+          width="100%"
+          height="100%"
+          type="Column2d"
+          [dataSource]="barData"
+        >
+        </fusioncharts>
+      </div>
+    </div>
+    <div class="total-dough-wrap">
+      <div class="graph-right">
+        <fusioncharts
+          width="120%"
+          height="100%"
+          type="doughnut2d"
+          [dataSource]="doughData"
+        >
+        </fusioncharts>
+      </div>
+    </div>
+    <!--  <mat-nav-list class="all-accounts-list">-->
+    <!--    <mat-list-item *ngFor="let ac of initAllAccServices; let it = index" style="text-align: right">-->
+    <!--      <h3 matLine [routerLink]="['/dash', ac.id, ac.label]">{{ac.label}}: <span class="mat-headline"> ${{ac.value}}</span> </h3>-->
+    <!--    </mat-list-item>-->
+    <!--  </mat-nav-list>-->
+  </mat-card>
+  <mat-divider></mat-divider>
+  <mat-card class="second-row-block mat-elevation-z3">
+    <mat-card-content class="total-accounts-card-content">
+      <fusioncharts
+        width="100%"
+        height="500"
+        type="stackedcolumn2d"
+        [dataSource]="stackData"
+      >
+      </fusioncharts>
+    </mat-card-content>
+  </mat-card>
+</div>

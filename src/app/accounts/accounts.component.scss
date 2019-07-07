@@ -1,0 +1,60 @@
+.account-wrap {
+
+}
+
+.first-row-block {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  .total-sum-wrap {
+    flex: 1;
+    max-width: 500px;
+    .bar-chart-avg {
+      max-width: 500px;
+      min-height: 300px;
+    }
+  }
+  .total-dough-wrap {
+    flex: 1;
+    .graph-right {
+      max-width: 600px;
+    }
+  }
+
+
+}
+.second-row-block {
+  max-width: 100%;
+  .total-accounts-card-content {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .first-row-block {
+    align-items: center;
+    .total-sum-wrap {
+      flex: 1;
+      max-width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      .bar-chart-avg {
+        max-width: 800px;
+        margin: auto;
+      }
+    }
+    .total-dough-wrap {
+      text-align: center;
+      flex: 1;
+      max-width: 100%;
+      .graph-right {
+        max-width: 800px;
+      }
+    }
+
+  }
+
+}

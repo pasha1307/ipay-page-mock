@@ -116,20 +116,6 @@ export const allAccServicees = [
   }
 ];
 
-export const AllBarData = [
-  {
-    label: 'Previous Month',
-    value: '12100'
-  },
-  {
-    label: 'Current Month',
-    value: '11750'
-  },
-  {
-    label: 'Next Month (estimated)',
-    value: '11200'
-  }
-];
 export const acOneBarData = [
   {
     label: 'Previous Month',
@@ -158,7 +144,6 @@ export const acTwoBarData = [
     value: '2100'
   }
 ];
-
 export const acThreeBarData = [
   {
     label: 'Previous Month',
@@ -173,3 +158,22 @@ export const acThreeBarData = [
     value: '2900'
   }
 ];
+export const AllBarData = [
+  {
+    label: 'Previous Month',
+    value: '12100'
+  },
+  {
+    label: 'Current Month',
+    value: '11750'
+  },
+  {
+    label: 'Next Month (estimated)',
+    value: '11200'
+  }
+];
+export const allDataCenters = [
+  {name: 'DC-1', total: 3000},
+  {name: 'DC-2', total: 5050},
+  {name: 'Data Center 3', total: 2800},
+  {name: 'All Data Centers', total: 11750}];
